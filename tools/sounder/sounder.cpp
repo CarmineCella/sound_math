@@ -189,7 +189,7 @@ int configure (T sr, std::ifstream& config, std::vector<SpectralChord<T>*>& even
 int main (int argc, char* argv[]) {
 	cout << "[sounder, ver. 1.00]" << endl << endl;
 	cout << "spectral sound synthesis" << endl;
-	cout << "(c) 2012 www.sonic-pad.com" << endl << endl;
+	cout << "(c) 2011-2024 by Carmine E. Cella" << endl << endl;
 	
 	srand (time (NULL));
 	

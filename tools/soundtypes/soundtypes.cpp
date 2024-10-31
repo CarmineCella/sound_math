@@ -28,8 +28,7 @@ int main (int argc, char* argv[]) {
 	
 	cout << "[soundtypes, ver. 1.00]" << endl << endl
 		 << "analysis and synthesis framework" << endl
-		 << "written by carmine e. cella" << endl
-		 << "(c) 2009-2013 www.soundtypes.com" << endl << endl;
+		 << "(c) 2011-2024 by Carmine E. Cella" << endl << endl;
 	try {
 		if (argc != 2) {
 			throw runtime_error (

@@ -53,8 +53,7 @@ int main (int argc, char* argv[]) {
 	
 	cout << "[nebula, ver. 1.00]" << endl << endl;
 	cout << "advanced granular synthesis" << endl;
-	cout << "written by Carmine E. Cella" << endl;
-	cout << "(c) 2011 www.sonic-pad.com" << endl << endl;
+	cout << "(c) 2011-2024 by Carmine E. Cella" << endl << endl;
 
 	int bsize = 64; // default
 

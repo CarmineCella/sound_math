@@ -23,8 +23,7 @@ int main (int argc, char* argv[])  {
 
 	cout << "[sparkle, ver. 1.00]" << endl << endl;
 	cout << "advanced phase vocoder" << endl;
-	cout << "written by Carmine E. Cella" << endl;
-	cout << "(c) 2011 www.sonic-pad.com" << endl << endl;
+	cout << "(c) 2011-2024 by Carmine E. Cella" << endl << endl;
 
 	// preparing buffers for allocation...
 	float* input = 0;

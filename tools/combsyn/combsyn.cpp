@@ -55,8 +55,7 @@ int main (int argc, char* argv[]) {
 		
 		cout << "[combsyn, ver. 1.00]" << endl << endl;
 		cout << "minimalistic comb-based synthesizer" << endl;
-		cout << "written by Carmine E. Cella" << endl;
-		cout << "(c) 2011 www.sonic-pad.com" << endl << endl;
+		cout << "(c) 2011-2024 by Carmine E. Cella" << endl << endl;
 
 		if (argc < ARGMIN) {
 			throw runtime_error ("combSyn in.wav out.wav dur tmin tmax tmine tmaxe smin smax dmin dmax norm sl f1...fn\n"\
