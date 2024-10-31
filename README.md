@@ -24,7 +24,7 @@ The SoundMath library is simple to compile and install. Follow these steps to se
    make
 
 
-   ## Requirements
+## Requirements
 
 - **C++17 or later**: Ensure your compiler supports C++17 or a more recent standard.
 - SoundMath does not depend on any external libraries, making it easy to integrate into existing projects without worrying about additional dependencies.
