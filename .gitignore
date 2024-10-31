@@ -1,4 +1,5 @@
 .DS_Store
+tools/.DS_Store
 build
 docs/html
 
