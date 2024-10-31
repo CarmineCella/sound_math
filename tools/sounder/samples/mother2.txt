@@ -1,0 +1,9 @@
+;design                     start   dur     f0     partials     thickness   spread      coeff    slope
+harm                        0       60      55     8            5           .001        1.19    .5
+geom                        20      40      110    8            8           .001        1.21    .5
+harm                        40      20      110    6            5           .001        1.19    .5
+geom                        44      16      220    6            5           .01         1.11    .5
+
+rand                       0       35      55     8            5           .001        .59     .5
+model:Solar_mono.wav:1.5    0       30      110     10           1           1         1       .5
+

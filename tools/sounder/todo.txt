@@ -1,0 +1,7 @@
+; slope --
+; modulazione con rumore --
+; glissato percentuale -- 
+; da modello --
+; sintesi sottrattiva
+; volume individuale
+; da crossing (??)

@@ -1,0 +1,8 @@
+;design     start    dur f0      partials    thickness   spread  coeff   slope
+harm        0        60  25.96   7           5           0.002   1.17    .5
+harm        25       60  27.5    5           3           0.01    1.67    .3
+geom        35       60  31      4           3           0.007   1.42    .5
+harm        55       60  55      8           4           0.001   1.01    .4
+geom        65       60  59      6           3           0.002   1.32    .45
+harm        90       30  110     3           3           0.006   1.01     .5
+harm        90       60  27.5    5           3           0.01    1.001    .5

@@ -1,0 +1,3 @@
+;design                     start    dur f0      partials    thickness   spread  coeff   slope
+model:Solar_mono.wav:2.75    0       30  110     10             4          .002       1     .5
+
