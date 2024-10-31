@@ -1,10 +1,10 @@
-# SoundMath template library
+# The sound_mmath template library
 
-SoundMath is a C++ library designed for advanced sound and music computing. It offers a collection of template classes for various sound synthesis and processing tasks. This lightweight library is built to be self-contained, requiring no external libraries, and focuses on providing efficient and flexible tools for audio developers and researchers.
+The C++ library *sound_math* is designed for advanced sound and music computing. It offers a collection of template classes for various sound synthesis and processing tasks. This lightweight library is built to be self-contained, requiring no external libraries, and focuses on providing efficient and flexible tools for audio developers and researchers.
 
 ## Features
 
-The SoundMath library also includes the following tools:
+The *sound_math* library also includes the following tools:
 
 - **pconv**: Fast convolution tool for audio processing.
 - **sparkle**: A phase vocoder for time-stretching and pitch-shifting audio.
@@ -14,7 +14,7 @@ The SoundMath library also includes the following tools:
 
 ## Installation
 
-The SoundMath library is simple to compile and install. Follow these steps to set up the library:
+The *sound_math* library is simple to compile and install. Follow these steps to set up the library:
 
 1. Create a build directory:
    ```bash
