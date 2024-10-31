@@ -1,4 +1,4 @@
-# The sound_mmath template library
+# The sound_math template library
 
 The C++ library *sound_math* is designed for advanced sound and music computing. It offers a collection of template classes for various sound synthesis and processing tasks. This lightweight library is built to be self-contained, requiring no external libraries, and focuses on providing efficient and flexible tools for audio developers and researchers.
 
