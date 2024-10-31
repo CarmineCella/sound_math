@@ -892,6 +892,7 @@ public:
 		//std::cout << centrs.str () << std::endl;
 		std::ifstream ctrin (centrs.str ().c_str ());
 		if (!ctrin.good ()) {
+			std::cout << "____ " << centrs.str ().c_str () << std::endl;
 			throw std::runtime_error ("cannot open file for centroids");
 		}	
 

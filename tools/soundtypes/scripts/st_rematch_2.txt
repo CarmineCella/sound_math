@@ -1,0 +1,113 @@
+;
+; soundtypes - configuration file
+;
+
+; * help *
+;
+; - max analysis frequency is nyquist
+
+; - available windows: hanning hamming blackman bartlett
+
+; - available amplitude scales: lin log pow
+
+; - normalizations: 0 = no, 1 = min/max, 2 = mean/stddev
+
+; - available features: 
+;   spectral -> centroid spread skewness kurtosis irregularity flux 
+;               slope decrease flatness crest hfc
+;   perceptual -> mfcc[1-15]
+;   harmonic -> f0 inharmonicity 
+;   temporal -> energy zcr 
+
+; - available clustering algorithms: gmm, kmeans
+
+; - the number of centroids is a ratio of the number of frames; 
+;   max is 1, 0 means no clustering
+
+; - if dimensions are 0 pca reduction is not applied, otherwise is the # of pcas
+
+; - types of performances are: none, rebuild, generate
+
+; - types.rematch.weights are multiplied to correspondent descriptor (by order)
+
+; - types.rematch.xmode = mult, flatten (needs coefficients), morph
+
+; - available distance measures: euclid mahalanobis taxicab cosim kullback
+
+; - if probabilities.merge is not "none" then the markov model is merged with
+;   the specified one, at the given amount
+
+; - available algorithms for synthesis: average weighted random closest
+
+; - pitch, formants and stretch are ratios of original file
+
+; - threshold is used for denoising
+
+; - envelope is the number of coefficient for envelope preservation
+;   (needed for formants; optional for pitch)
+
+; - jitter is specified in samples
+
+; - stereowidth (ratio) and stereodelay (samples) are used to generate a stereo
+;   file; if stereowidth is 0 a mono file is generated
+
+global.input				cage.wav
+
+global.outputpath			.
+global.verbose				no
+
+analysis.performance		compute
+analysis.sr					44100
+analysis.win.type			hanning
+analysis.win.size			4096
+analysis.win.hop			1024
+analysis.maxfreq			11025
+analysis.ampscale			lin
+analysis.normalize			0
+analysis.descriptors		energy centroid spread skewness kurtosis
+analysis.modeling			no
+
+types.performance			compute
+types.algorithm				kmeans
+types.clusters			    .95
+types.dimensions			0
+types.showlabels			no
+types.dictionary			average
+types.rematch.file			god_vocal_poly.wav
+types.rematch.weights.apply no
+types.rematch.weights		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+types.rematch.distance		euclid
+types.rematch.xmode			flatten
+types.rematch.amount		1
+types.rematch.envelope		70
+
+probabilities.performance 	compute
+probabilities.ngrams		2
+probabilities.smoothwin		1
+probabilities.merge.file	none
+probabilities.merge.amount	1
+
+synthesis.performance		rebuild
+synthesis.reshape			yes
+synthesis.gen.order			1
+synthesis.gen.weight		1
+synthesis.distance			euclid
+synthesis.filters.apply		no
+synthesis.filters.min		0 400 
+synthesis.filters.max		.3 600
+synthesis.stretch			1
+synthesis.pitch				1
+synthesis.formants			1
+synthesis.envelope			0
+synthesis.threshold			0
+synthesis.rescaling			1
+synthesis.jitter			0
+synthesis.stereo.width		1.3
+synthesis.stereo.delay		120
+
+; not implemented yet
+;analysis.fftpadding		 1
+;types.rematch.probabilities file.probs1.txt
+;synthesis.xsynth			 file.wav:.3:1
+
+; * eof *
