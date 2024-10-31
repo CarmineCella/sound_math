@@ -135,16 +135,16 @@ struct Features {
 	}
 
 	DescriptorID str2id (const std::string& name) {
-		DescriptorID pos = (DescriptorID) -1;
+		int pos = -1;
 		for (int i = 0; i < DESCRIPTORS_NUMBER; ++i) {
 			if (name == id2str ((DescriptorID) (i))) {
-				pos = (DescriptorID) i;
+				pos = i;
 				break;
 			}
 		}
 		
 		if (pos == -1) throw std::runtime_error ("invalid descriptor specified");
-		return pos;
+		return (DescriptorID) pos;
 	}	
 };
 
@@ -575,7 +575,6 @@ public:
 			throw std::runtime_error ("invalid dimensions for pca reduction");
 		}
 		if ( ngrams < 0 || ngrams > totSamp - 1) {
-			std::cout << ngrams << " " << std::cout << totSamp << std::endl;
 			throw std::runtime_error ("invalid ngrams level");
 		}
 		if ( order >  ngrams ||  order < 0) {
@@ -978,8 +977,8 @@ public:
 						++symNum;
 					}   									
 					//std::cout << std::endl;
-					//it[indexes] = tokens;
-					it.insert(std::make_pair<std::vector<int>, std::vector<T> > (indexes, tokens));
+					it[indexes] = tokens;
+					//it.insert(std::make_pair<std::vector<int>, std::vector<T> > (indexes, tokens));
 				}
 				//getchar ();
 			}	

@@ -158,6 +158,7 @@ namespace soundmath {
 	template<typename T>
 	class AbstractFFT {
 	public:
+		virtual ~AbstractFFT  () {}
 		virtual void forward (T*) = 0;
 		virtual void inverse (T*) = 0;
 	};

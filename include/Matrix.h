@@ -46,7 +46,7 @@ namespace soundmath {
 			m_totalSize (m_rows * m_columns), m_data (new T[m_totalSize]),
 			m_m (new T*[m_rows]) {
 			for (int i = 0; i < m_rows; ++i) m_m[i] = m_data + i * m_columns;
-			assignFrom (x);
+			this->assignFrom (x);
 		}
 		~Matrix() {
 			delete [] m_m;

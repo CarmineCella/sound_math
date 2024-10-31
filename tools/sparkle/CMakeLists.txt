@@ -1,6 +1,6 @@
-cmake_minimum_required (VERSION 2.6)
-
 project (sparkle)
+
+SET(CMAKE_CXX_FLAGS "-Wall -g2 -O2 -std=c++11")
 
 include_directories("../../include")
 

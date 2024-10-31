@@ -44,7 +44,6 @@ namespace soundmath {
 	template <typename T>
 		T acf (const T* in, T* out, int len) {	
 		int len2 = len >> 1;
-		int k = 1;
 		T scale = 1. / len;
 		
 		for (int i = 0; i < len2; ++i) {
@@ -60,7 +59,6 @@ namespace soundmath {
 	template <typename T>
 		T amdf (const T* in, T* out, int len) {	
 		int len2 = len >> 1;
-		int k = 1;
 		T scale = 1. / len;
 		
 		for (int i = 0; i < len2; ++i) {

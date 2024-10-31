@@ -16,214 +16,6 @@
 namespace soundmath {
 #define PCASIGN(a, b) ( (b) < 0 ? -fabs(a) : fabs(a) )
 
-	// -----------------------------------------------------------------//
-
-	template<class T>
-	inline T squared(const T a) {
-		return a * a;
-	}
-
-	template <typename T>
-	inline T logTwo(const T& x) {
-		return LOG2OF10 * std::log10((T) x);
-	}
-
-	// ------------------------------------------------------------------//
-
-	template <typename T>
-	inline void scale(
-			T* values,
-			T sc,
-			int N) {
-
-		for (int i = 0; i < N; ++i) {
-			values[i] *= sc;
-		}
-	}
-
-	template <typename T>
-	inline T minimum(
-			const T* values,
-			int N, int& minPos) {
-		if (1 > N) return 0;
-
-		T min = values[0];
-		for (int i = 0; i < N; ++i) {
-			if (min > values[i]) {
-				min = values[i];
-				minPos = i;
-			}
-		}
-
-		return min;
-	}
-
-	template <typename T>
-	inline T maximum(
-			const T* values,
-			int N, int& maxPos) {
-		if (1 > N) return 0;
-
-		T max = values[0];
-		for (int i = 0; i < N; ++i) {
-			if (max < values[i]) {
-				max = values[i];
-				maxPos = i;
-			}
-		}
-
-		return max;
-	}
-
-	template <typename T>
-	T sum(
-			const T* values,
-			int N) {
-		if (1 > N) return 0;
-
-		T sum = 0.;
-		for (int i = 0; i < N; ++i) {
-			sum += values[i];
-		}
-
-		return sum;
-	}
-
-	template <typename T>
-	T mean(
-			const T* values,
-			int N) {
-		if (1 > N) return 0;
-
-		return sum(values, N) / N;
-	}
-
-	template <typename T>
-	void normalize(const T* data, T* result, int N) {
-		T min = data[0];
-		T max = data[0];
-
-		for (int i = 0; i < N; ++i) {
-			if (max < data[i]) max = data[i];
-			if (min > data[i]) min = data[i];
-		}
-
-		double delta = max - min;
-		//T fmin = fabs(min);
-		for (int i = 0; i < N; ++i) {
-			result[i] = delta != 0 ? ((data[i] - min) / (max - min)): 0;
-			//result[i] += min;
-		}
-	}
-
-	template <typename T>
-	void normalize2(const T* data, T* result, int N) {
-		T* weights = new T[N];
-		for (int i = 0; i < N; ++i) weights[i] = 1;
-
-		T mean = centroid (weights, data, N);
-		T stdd = stddev (weights, data, mean, N);
-
-
-		for (int i = 0; i < N; ++i) {
-			result[i] = stdd != 0 ? ((data[i] - mean) / stdd) : 0;
-			//result[i] += mean;
-		}
-		delete [] weights;
-	}
-
-	template <typename T>
-	void unnormalize(const T* data, T* result, int N) {
-		T min = data[0];
-		T max = data[0];
-
-		for (int i = 0; i < N; ++i) {
-			if (max < data[i]) max = data[i];
-			if (min > data[i]) min = data[i];
-		}
-
-		double delta = max - min;
-		//T fmin = fabs(min);
-		for (int i = 0; i < N; ++i) {
-			result[i] = (data[i] * delta) + min;
-			//result[i] += min;
-		}
-	}
-
-	template <typename T>
-	void unnormalize2(const T* data, T* result, int N) {
-		T* weights = new T[N];
-		for (int i = 0; i < N; ++i) weights[i] = 1;
-
-		T mean = centroid (weights, data, N);
-		T stdd = stddev (weights, data, mean, N);
-
-
-		for (int i = 0; i < N; ++i) {
-			result[i] = (data[i]* stdd) + mean;
-			//result[i] += mean;
-		}
-		delete [] weights;
-	}
-
-	template <typename T>
-	void scale(const T* buff, T* out, int len, T factor) {
-		for (int i = 0; i < len; ++i) {
-			out[i] = buff[i] * factor;
-		}
-	}
-
-	template <typename T>
-	void swapElem(T& a, T& b) {
-		register T t = (a);
-		(a) = (b);
-		(b) = t;
-	}
-
-	template <typename T>
-	T kth_smallest(T a[], int n, int k) {
-		register int i, j, l, m;
-		register T x;
-		l = 0;
-		m = n - 1;
-		while (l < m) {
-			x = a[k];
-			i = l;
-			j = m;
-			do {
-				while (a[i] < x) i++;
-				while (x < a[j]) j--;
-				if (i <= j) {
-					swapElem(a[i], a[j]);
-					i++;
-					j--;
-				}
-			} while (i <= j);
-			if (j < k) l = i;
-			if (k < i) m = j;
-		}
-		return a[k];
-	}
-
-	template <typename T>
-	T median(T a[], int n) {
-		return kth_smallest(a, n, (((n) & 1) ? ((n) / 2) : (((n) / 2) - 1)));
-	}
-
-	template <typename T>
-	T frand(T min, T max) {
-		return ((max - min) * ((T)rand() / RMAX) + min);
-	}
-
-	template <typename T>
-	int wchoice(T* dist, int n) {
-		T R = frand(0., 1.);
-		for (int i = 0; i < n; ++i) {
-			if (dist[i] >= R) return i;
-		}
-
-		return (int) frand(0, n);
-	}
 	// ------------------------------------------------------------------//
 
 	template <typename T>
@@ -358,8 +150,218 @@ namespace soundmath {
 		return slope;
 	}
 
-	// -------------------------------------------------------------- //
 
+
+	// -----------------------------------------------------------------//
+
+	template<class T>
+	inline T squared(const T a) {
+		return a * a;
+	}
+
+	template <typename T>
+	inline T logTwo(const T& x) {
+		return LOG2OF10 * std::log10((T) x);
+	}
+
+	// ------------------------------------------------------------------//
+
+	template <typename T>
+	inline void scale(
+			T* values,
+			T sc,
+			int N) {
+
+		for (int i = 0; i < N; ++i) {
+			values[i] *= sc;
+		}
+	}
+
+	template <typename T>
+	inline T minimum(
+			const T* values,
+			int N, int& minPos) {
+		if (1 > N) return 0;
+
+		T min = values[0];
+		for (int i = 0; i < N; ++i) {
+			if (min > values[i]) {
+				min = values[i];
+				minPos = i;
+			}
+		}
+
+		return min;
+	}
+
+	template <typename T>
+	inline T maximum(
+			const T* values,
+			int N, int& maxPos) {
+		if (1 > N) return 0;
+
+		T max = values[0];
+		for (int i = 0; i < N; ++i) {
+			if (max < values[i]) {
+				max = values[i];
+				maxPos = i;
+			}
+		}
+
+		return max;
+	}
+
+	template <typename T>
+	T sum(
+			const T* values,
+			int N) {
+		if (1 > N) return 0;
+
+		T sum = 0.;
+		for (int i = 0; i < N; ++i) {
+			sum += values[i];
+		}
+
+		return sum;
+	}
+
+	template <typename T>
+	T mean(
+			const T* values,
+			int N) {
+		if (1 > N) return 0;
+
+		return sum(values, N) / N;
+	}
+
+	template <typename T>
+	void normalize(const T* data, T* result, int N) {
+		T min = data[0];
+		T max = data[0];
+
+		for (int i = 0; i < N; ++i) {
+			if (max < data[i]) max = data[i];
+			if (min > data[i]) min = data[i];
+		}
+
+		double delta = max - min;
+		//T fmin = fabs(min);
+		for (int i = 0; i < N; ++i) {
+			result[i] = delta != 0 ? ((data[i] - min) / (max - min)): 0;
+			//result[i] += min;
+		}
+	}
+
+	template <typename T>
+	void normalize2(const T* data, T* result, int N) {
+		T* weights = new T[N];
+		for (int i = 0; i < N; ++i) weights[i] = 1;
+
+		T mean = centroid<T> (weights, data, N);
+		T stdd = stddev<T> (weights, data, mean, N);
+
+
+		for (int i = 0; i < N; ++i) {
+			result[i] = stdd != 0 ? ((data[i] - mean) / stdd) : 0;
+			//result[i] += mean;
+		}
+		delete [] weights;
+	}
+
+	template <typename T>
+	void unnormalize(const T* data, T* result, int N) {
+		T min = data[0];
+		T max = data[0];
+
+		for (int i = 0; i < N; ++i) {
+			if (max < data[i]) max = data[i];
+			if (min > data[i]) min = data[i];
+		}
+
+		double delta = max - min;
+		//T fmin = fabs(min);
+		for (int i = 0; i < N; ++i) {
+			result[i] = (data[i] * delta) + min;
+			//result[i] += min;
+		}
+	}
+
+	template <typename T>
+	void unnormalize2(const T* data, T* result, int N) {
+		T* weights = new T[N];
+		for (int i = 0; i < N; ++i) weights[i] = 1;
+
+		T mean = centroid (weights, data, N);
+		T stdd = stddev (weights, data, mean, N);
+
+
+		for (int i = 0; i < N; ++i) {
+			result[i] = (data[i]* stdd) + mean;
+			//result[i] += mean;
+		}
+		delete [] weights;
+	}
+
+	template <typename T>
+	void scale(const T* buff, T* out, int len, T factor) {
+		for (int i = 0; i < len; ++i) {
+			out[i] = buff[i] * factor;
+		}
+	}
+
+	template <typename T>
+	void swapElem(T& a, T& b) {
+		T t = (a);
+		(a) = (b);
+		(b) = t;
+	}
+
+	template <typename T>
+	T kth_smallest(T a[], int n, int k) {
+		int i, j, l, m;
+		T x;
+		l = 0;
+		m = n - 1;
+		while (l < m) {
+			x = a[k];
+			i = l;
+			j = m;
+			do {
+				while (a[i] < x) i++;
+				while (x < a[j]) j--;
+				if (i <= j) {
+					swapElem(a[i], a[j]);
+					i++;
+					j--;
+				}
+			} while (i <= j);
+			if (j < k) l = i;
+			if (k < i) m = j;
+		}
+		return a[k];
+	}
+
+	template <typename T>
+	T median(T a[], int n) {
+		return kth_smallest(a, n, (((n) & 1) ? ((n) / 2) : (((n) / 2) - 1)));
+	}
+
+	template <typename T>
+	T frand(T min, T max) {
+		return ((max - min) * ((T)rand() / RMAX) + min);
+	}
+
+	template <typename T>
+	int wchoice(T* dist, int n) {
+		T R = frand(0., 1.);
+		for (int i = 0; i < n; ++i) {
+			if (dist[i] >= R) return i;
+		}
+
+		return (int) frand(0, n);
+	}
+
+	// -------------------------------------------------------------- //
 	template <typename T>
 	T edistance (const T* a, const T* b, int size) {
 		// NB: it assumes vector have the same size

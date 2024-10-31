@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 3.29)
 project (sound_math)
 
 add_subdirectory (tools/combsyn)
