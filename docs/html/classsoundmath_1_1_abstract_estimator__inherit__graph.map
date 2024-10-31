@@ -1,0 +1,9 @@
+<map id="soundmath::AbstractEstimator&lt; T &gt;" name="soundmath::AbstractEstimator&lt; T &gt;">
+<area shape="rect" id="Node000001" title="Base class for all pitch detectors." alt="" coords="5,55,236,80"/>
+<area shape="rect" id="Node000002" href="$classsoundmath_1_1_differential_estimator.html" title="Fundamental frequency estimator based on average magnitude difference function: for each buffer retur..." alt="" coords="284,5,528,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,49,327,29,328,34,214,54"/>
+<area shape="rect" id="Node000003" href="$classsoundmath_1_1_period_estimator.html" title="Fundamental frequency estimator based on period estimation by means of subband filtering." alt="" coords="297,55,515,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,65,296,65,296,70,251,70"/>
+<area shape="rect" id="Node000004" href="$classsoundmath_1_1_spectral_estimator.html" title="Fundamental frequency estimator based on spectrum analysis." alt="" coords="291,104,520,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="214,81,328,101,327,106,213,86"/>
+</map>

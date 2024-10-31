@@ -1,0 +1,11 @@
+<map id="ModelingSpace&lt; T &gt;" name="ModelingSpace&lt; T &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="100,199,242,225"/>
+<area shape="rect" id="Node000002" href="$struct_features.html" title=" " alt="" coords="5,103,78,128"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,136,156,196,153,201,69,140"/>
+<area shape="rect" id="Node000003" href="$classsoundmath_1_1_matrix.html" title=" " alt="" coords="102,95,240,136"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,151,174,199,168,199,168,151"/>
+<area shape="rect" id="Node000004" href="$classsoundmath_1_1_matrix_base.html" title=" " alt="" coords="89,5,252,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="174,62,174,95,168,95,168,62"/>
+<area shape="rect" id="Node000005" href="$classsoundmath_1_1_dynamic_matrix.html" title=" " alt="" coords="264,95,446,136"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="304,146,196,201,194,196,302,141"/>
+</map>

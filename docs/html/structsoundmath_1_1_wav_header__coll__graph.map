@@ -1,0 +1,9 @@
+<map id="soundmath::WavHeader" name="soundmath::WavHeader">
+<area shape="rect" id="Node000001" title=" " alt="" coords="170,94,331,120"/>
+<area shape="rect" id="Node000002" href="$structsoundmath_1_1_wav_riff.html" title=" " alt="" coords="5,5,146,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,36,227,91,224,96,113,41"/>
+<area shape="rect" id="Node000003" href="$structsoundmath_1_1_wav_format.html" title=" " alt="" coords="170,5,330,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="253,47,253,94,248,94,248,47"/>
+<area shape="rect" id="Node000004" href="$structsoundmath_1_1_wav_data.html" title=" " alt="" coords="354,5,501,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="390,41,276,96,274,91,388,36"/>
+</map>

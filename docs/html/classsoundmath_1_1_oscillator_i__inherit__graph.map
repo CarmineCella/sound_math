@@ -1,0 +1,7 @@
+<map id="soundmath::OscillatorI&lt; T &gt;" name="soundmath::OscillatorI&lt; T &gt;">
+<area shape="rect" id="Node000001" title="Digital oscillator with linear interpolation and integer phase." alt="" coords="28,79,212,105"/>
+<area shape="rect" id="Node000003" href="$classsoundmath_1_1_envelope.html" title="An envelope generator." alt="" coords="30,153,210,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,120,123,152,117,152,117,120"/>
+<area shape="rect" id="Node000002" href="$classsoundmath_1_1_abstract_oscillator.html" title="Base class for all oscillators." alt="" coords="5,5,235,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,46,123,79,117,79,117,46"/>
+</map>

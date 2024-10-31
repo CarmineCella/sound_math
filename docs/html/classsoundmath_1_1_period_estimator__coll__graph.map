@@ -1,0 +1,5 @@
+<map id="soundmath::PeriodEstimator&lt; T &gt;" name="soundmath::PeriodEstimator&lt; T &gt;">
+<area shape="rect" id="Node000001" title="Fundamental frequency estimator based on period estimation by means of subband filtering." alt="" coords="11,79,230,105"/>
+<area shape="rect" id="Node000002" href="$classsoundmath_1_1_abstract_estimator.html" title="Base class for all pitch detectors." alt="" coords="5,5,236,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,46,123,79,118,79,118,46"/>
+</map>

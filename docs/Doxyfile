@@ -25,7 +25,7 @@ DOXYFILE_ENCODING      = UTF-8
 # The PROJECT_NAME tag is a single word (or a sequence of words surrounded 
 # by quotes) that should identify the project.
 
-PROJECT_NAME           = SoundMath
+PROJECT_NAME           = sound_math
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. 
 # This could be handy for archiving the generated documentation or 
@@ -612,11 +612,13 @@ WARN_LOGFILE           =
 # directories like "/usr/src/myproject". Separate the files or directories 
 # with spaces.
 
-INPUT                  = /Users/Carmine/Elementi/Dati/Sorgenti/Cpp/Personali/SoundMath/include/dsp \
-                         /Users/Carmine/Elementi/Dati/Sorgenti/Cpp/Personali/SoundMath/include/helpers \
-                         /Users/Carmine/Elementi/Dati/Sorgenti/Cpp/Personali/SoundMath/include/inout \
-                         /Users/Carmine/Elementi/Dati/Sorgenti/Cpp/Personali/SoundMath/include/math \
-                         /Users/Carmine/Elementi/Dati/Sorgenti/Cpp/Personali/SoundMath/include/metatools \
+INPUT                  = ../include/ \
+                         ../tools/combsyn \
+                         ../tools/nebula \
+                         ../tools/pconv \
+                         ../tools/sparkle \
+                         ../tools/sounder \
+                         ../tools/soundtypes \
                          .
 
 # This tag can be used to specify the character encoding of the source files 

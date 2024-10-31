@@ -1,0 +1,5 @@
+<map id="soundmath::VariState&lt; T &gt;" name="soundmath::VariState&lt; T &gt;">
+<area shape="rect" id="Node000001" title="Variable&#45;state filter (Chamberlin version): for each buffer returns a buffer of same size." alt="" coords="18,79,196,105"/>
+<area shape="rect" id="Node000002" href="$classsoundmath_1_1_abstract_filter.html" title="Base class for all processing units (filters)" alt="" coords="5,5,209,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,46,110,79,104,79,104,46"/>
+</map>

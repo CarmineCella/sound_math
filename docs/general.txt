@@ -1,32 +1,23 @@
-/*! \mainpage [SoundMath]
+/*! \mainpage [sound_math]
 
-The <B>SoundMath</B> template library is a collection of C++ classes to 
+The <B>sound_math</B> template library is a collection of C++ classes to 
 generate, transform and analyse sound signals and is intended for research usage.
 One of the main features of this library is the soundtypes analysis and synthesis
-(for a theoretical explanation please see <B>www.soundtypes.com</B>). <br>
+(for a theoretical explanation please see <B>http://www.carminecella.com/research/icmc2013_cella_burred.pdf</B>). <br>
 
 <br>
 <B>Related pages</B>
 
-<LI><A HREF="http://www.carminecella.com"> Personal page of Carmine Emanuele Cella</A></LI>
-<BR>
-<LI><A HREF="http://www.soundtypes.com"> Main page for the soundtypes analysis and synthesis </A></LI>
-<BR>
-<LI><A HREF="http://www.sonic-pad.com">
-Main page for the SonicPad application, a set of tools based on SoundMath</A></LI>
+<LI><A HREF="http://www.carminecella.com/research.html"> Research page of Carmine Emanuele Cella</A></LI>
 <BR>
 
 <br>
 <B>Copyright</B>
 
-SoundMath is copyright (c) 2012 by Carmine Emanuele Cella<br>
+sound_math is copyright (c) 2009-2024 by Carmine Emanuele Cella<br>
 
 */
 
 
 <P>
-<FONT SIZE=-1>
-The SoundMath template library has been developed at IRCAM <B> www.ircam.fr </B> .
-
-</FONT>
 

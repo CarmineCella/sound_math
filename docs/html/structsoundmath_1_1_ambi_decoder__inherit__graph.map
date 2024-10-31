@@ -1,0 +1,9 @@
+<map id="soundmath::AmbiDecoder" name="soundmath::AmbiDecoder">
+<area shape="rect" id="Node000001" title=" " alt="" coords="156,5,328,31"/>
+<area shape="rect" id="Node000002" href="$structsoundmath_1_1_blumlein.html" title=" " alt="" coords="5,79,149,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,40,106,81,104,76,199,35"/>
+<area shape="rect" id="Node000003" href="$structsoundmath_1_1_mid_side.html" title=" " alt="" coords="172,79,312,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,46,245,79,240,79,240,46"/>
+<area shape="rect" id="Node000004" href="$structsoundmath_1_1_u_h_j.html" title=" " alt="" coords="337,79,457,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="283,35,372,76,370,81,281,40"/>
+</map>
