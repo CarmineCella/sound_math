@@ -4,12 +4,12 @@ SoundMath is a C++ library designed for advanced sound and music computing. It o
 
 ## Features
 
-The SoundMath library includes the following tools:
+The SoundMath library also includes the following tools:
 
-- **pconv**: Fast convolution tool for real-time audio processing.
+- **pconv**: Fast convolution tool for audio processing.
 - **sparkle**: A phase vocoder for time-stretching and pitch-shifting audio.
-- **soundtypes**: Generative sound synthesis classes for creating synthetic sounds.
-- **nebula**: Granular synthesis module for manipulating audio grains.
+- **soundtypes**: Generative sound synthesis for sound hybridizations.
+- **nebula**: Granular synthesis on sound files.
 - **combsyn**: Filter-based resonant synthesis tool for simulating complex resonant structures.
 
 ## Installation
@@ -39,6 +39,6 @@ Contributions are welcome! Feel free to submit issues or pull requests to improv
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is licensed under the BSD type 2 License. See the `LICENSE` file for more details.
 
 
